@@ -52,4 +52,5 @@ target_link_libraries(${CMAKE_PROJECT_NAME} glm)
 include_directories(${PROJECT_SOURCE_DIR}/vendor/imgui)
 include_directories(${PROJECT_SOURCE_DIR}/vendor/imgui/backends)
 include_directories(${PROJECT_SOURCE_DIR}/vendor/stb)
+include_directories(${PROJECT_SOURCE_DIR}/Walnut/src/Walnut)
 

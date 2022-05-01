@@ -1,12 +1,12 @@
 #include "Image.h"
 
-#include "imgui.h"
-#include "backends/imgui_impl_vulkan.h"
+#include <imgui.h>
+#include <imgui_impl_vulkan.h>
 
 #include "Application.h"
 
 #define STB_IMAGE_IMPLEMENTATION
-#include "stb_image.h"
+#include <stb_image.h>
 
 namespace Walnut {
 
