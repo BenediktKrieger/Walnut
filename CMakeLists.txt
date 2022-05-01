@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.7)
-project(VulkanBase VERSION 1.0.0)
+project(Walnut VERSION 1.0.0)
 
 
 add_definitions(-D_CRT_SECURE_NO_WARNINGS)
@@ -45,7 +45,7 @@ add_subdirectory(${PROJECT_SOURCE_DIR}/vendor/glfw)
 target_link_libraries(${CMAKE_PROJECT_NAME} glfw)
 
 #add glm
-add_subdirectory(${PROJECT_SOURCE_DIR}/lib/glm)
+add_subdirectory(${PROJECT_SOURCE_DIR}/vendor/glm)
 target_link_libraries(${CMAKE_PROJECT_NAME} glm)
 
 #add imgui, stb
