@@ -8,8 +8,7 @@ IF(APPLE)
     add_definitions(-Wno-deprecated)
 ENDIF()
 
-
-add_compile_definitions(SHADER_PATH="${PROJECT_SOURCE_DIR}/src/shaders" TEXTURE_PATH="${PROJECT_SOURCE_DIR}/src/textures" MODEL_PATH="${PROJECT_SOURCE_DIR}/src/models")
+add_compile_definitions(SHADER_PATH="${PROJECT_SOURCE_DIR}/src/shaders" TEXTURE_PATH="${PROJECT_SOURCE_DIR}/src/textures" MODEL_PATH="${PROJECT_SOURCE_DIR}/src/models" WL_PLATFORM_WINDOWS)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -18,9 +17,13 @@ IF(MSVC)
 ENDIF()
 
 file(GLOB SOURCES
-    src/*.h
-    src/*.hpp
-    src/*.cpp
+    Walnut/src/Walnut/*.h
+    Walnut/src/Walnut/*.hpp
+    Walnut/src/Walnut/*.cpp
+    Walnut/src/Walnut/ImGui/*.cpp
+    WalnutApp/src/*.h
+    WalnutApp/src/*.hpp
+    WalnutApp/src/*.cpp
     vendor/imgui/*.cpp
     vendor/imgui/*.h
 )
@@ -52,5 +55,5 @@ target_link_libraries(${CMAKE_PROJECT_NAME} glm)
 include_directories(${PROJECT_SOURCE_DIR}/vendor/imgui)
 include_directories(${PROJECT_SOURCE_DIR}/vendor/imgui/backends)
 include_directories(${PROJECT_SOURCE_DIR}/vendor/stb)
-include_directories(${PROJECT_SOURCE_DIR}/Walnut/src/Walnut)
+include_directories(${PROJECT_SOURCE_DIR}/Walnut/src)
 
